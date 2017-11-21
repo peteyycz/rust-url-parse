@@ -1,0 +1,11 @@
+[package]
+name = "ffi"
+version = "0.1.0"
+authors = ["Peter Czibik <p.czibik@gmail.com>"]
+
+[lib]
+crate-type = ["dylib"]
+
+[dependencies]
+libc = "0.2"
+url = "1.6"
