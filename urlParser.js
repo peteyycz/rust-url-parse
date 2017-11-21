@@ -9,7 +9,7 @@ const ffi = require('./ffi');
 const urls = require('./urls');
 
 function performTest (testFunction) {
-  const tryCount = 10;
+  const tryCount = 1;
   const total = new Array(tryCount)
     .fill()
     .map(() => {
@@ -42,6 +42,6 @@ const nativeAvgDuration = performTest(getQuery);
 const ffiAvgDuration = performTest(ffi.getQuery);
 const neonAvgDuration = performTest(neon.getQuery);
 
-console.log('Native url parse', Math.round(nativeAvgDuration * 100) / 100);
-console.log('Rust FFI        ', Math.round(ffiAvgDuration * 100) / 100);
-console.log('Rust Neon       ', Math.round(neonAvgDuration * 100) / 100);
+console.log('Native url parse', Math.round(nativeAvgDuration * 100) / 100, 'ms');
+console.log('Rust FFI        ', Math.round(ffiAvgDuration * 100) / 100, 'ms');
+console.log('Rust Neon       ', Math.round(neonAvgDuration * 100) / 100, 'ms');

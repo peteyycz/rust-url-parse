@@ -7,7 +7,9 @@ const createFakeQueryParameter = function createFakeQueryParameter () {
   return [faker.lorem.word(), faker.lorem.word()].join('=');
 };
 
-const result = new Array(faker.random.number(1000))
+const urlLength = 10000;
+
+const result = new Array(urlLength)
   .fill()
   .map(() => {
     return [
