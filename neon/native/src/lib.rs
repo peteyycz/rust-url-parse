@@ -5,7 +5,7 @@ extern crate url;
 
 use url::{Url};
 use neon::vm::{Call, JsResult};
-use neon::js::{JsString, JsObject};
+use neon::js::{JsString};
 
 fn get_query(call: Call) -> JsResult<JsString> {
     let scope = call.scope;
